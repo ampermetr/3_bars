@@ -37,7 +37,7 @@ def get_closest_bar(data, longitude, latitude):
     minimal_dist = float('Inf')
     minimal_dist_name = []
     for item in data:
-        distance = ((item['Cells']['geoData']['coordinates'][0] - longitude)** 2 + (item['Cells']['geoData']['coordinates'][0] - latitude)** 2) ** 0.5
+        distance = ((item['Cells']['geoData']['coordinates'][0] - longitude)** 2 + (item['Cells']['geoData']['coordinates'][1] - latitude)** 2) ** 0.5
         if distance < minimal_dist:
             minimal_dist = distance        
             minimal_dist_name = []
